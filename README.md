@@ -1,6 +1,22 @@
-frontend-nanodegree-arcade-game
+# Classic Arcade Game 
 ===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## How to play 
+The evil monster have hidden your friends and your mission is to save them! 
+For each 5 diamonds, the monster give you one friend back. But for each friend you get back, you level up. With each level increase the bugs move faster. 
+The player have a startposition on the grass. There is a stone highway where the evil bugs transports. The purpose is to pass the enemies and the water to collect the diamonds on the other side of the river. 
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## How it runs
+There is 4 classes. 
+### 1. Score 
+The score class write the score and level board to the canvas. The score and level increases with the player class. 
+### 2. Enemy 
+The Enemy class creates the enemies and set their speed and position. The enemy objects are listed in an array.  
+### 3. Player 
+The player class creates the player and its position. The player class is used to check for collisions with the enemy objects and the gem. With collision with the gem the the score increases, and the level increases depending on the score. 
+In the `checkWinnig` function the gem images also changes.  
+### 4. Gem
+The gem class use a function to get a random number so that the gem change position if either a enemy collision, or a gem collection occurs. 
+
+   
+

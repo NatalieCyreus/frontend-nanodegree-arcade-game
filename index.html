@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Effective JavaScript: Frogger</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Arcade Game</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-md-4">
+				<!-- Trigger/Open The Modal -->
+				<button id="myBtn">Help</button>
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<h2>Im the evil monster, ggrrrr</h2>
+						<img src="images/monster.jpg">
+						<h3>The rumour says that you're a great diamond finder. The diamonds are over the river, I don't enjoy the water, my fur get all messsed up. <br>I have hidden your friends deep in the jungle.
+            I will give them back if you collect the precious jungle diamonds for me.<br>
+							<img src="images/char-boy.png">
+							<img src="images/char-cat-girl.png">
+							<img src="images/char-pink-girl.png">
+							<img src="images/char-princess-girl.png">
+
+							<br><img src="images/Gem Orange.png"><br>
+							For each 5 diamonds I give you back one friend.
+						</h3>
+						<br>
+						<img src="images/arrowKeys.png"><br>
+						<h3>Use the arrows on your keyboard to move.
+							<br>Be careful not to collide with the evil bugs!
+							<br> They won't take your diamonds, but they do bring you back to start position.<br>
+							<img src="images/enemy-bug.png"><br>
+							I don't wanna make this easy for you.<br>
+							For each friend you get back, you level up. The bugs moves faster each level.<br>
+							Click anywhere outside of this message or the cross in upper right corner to start the game.
+						</h3>
+						<h2>Good luck!</h2>
+					</div>
+				</div>
+        <div id="someDiv">
+          <h1>
+          Yay you saved a friend! Level up!
+          <h1>
+        </div>
+        <div id="winnerMessage">
+          <h1>
+          A true hero! You saved all your friends!!<br>😄<br>Refresh the page to start again!
+          <h1>
+        </div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<img src="images/char-boy-grey.png" id="boy">
+					<img src="images/char-cat-girl-grey.png" id="cat">
+					<img src="images/char-pink-girl-grey.png" id="pink">
+					<img src="images/char-princess-girl-grey.png" id="princess">
+				</div>
+				<script src="js/resources.js"></script>
+				<script src="js/app.js"></script>
+				<script src="js/engine.js"></script>
+				<script src="js/bootstrap.min.js"></script>
+			</div>
+		</div>
+		<div class="row" id='gems'>
+			<img src="images/Gem Orange-gray.png" id="gem1">
+			<img src="images/Gem Orange-gray.png"id="gem2">
+			<img src="images/Gem Orange-gray.png"id="gem3">
+			<img src="images/Gem Orange-gray.png"id="gem4">
+			<img src="images/Gem Orange-gray.png"id="gem5">
+		</div>
+	</body>
 </html>
