@@ -27,10 +27,6 @@ var Enemy = function(x, y, speed) {
 	this.sprite = 'images/enemy-bug.png';
 };
 
-var high;
-var speed = 70;
-var lowSpeed = 65;
-
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
@@ -126,8 +122,10 @@ Gem.prototype.render = function() {
 Player.prototype.checkCollisions = function() {
 	//console.log(player.y)
 	//console.log("checkCollisions");
-	for (var i = 0; i < allEnemies.length; i++) {
-		if ((player.x < allEnemies[i].x + allEnemies[i].width && player.x + player.width > allEnemies[i].x) && (player.y < allEnemies[i].y + allEnemies[i].height && player.y + player.height > allEnemies[i].y) && (player.y > 100)) {
+  var allEnemiesLength = allEnemies.length;
+	for (var i = 0; i < allEnemiesLength ; i++) {
+
+		if ((this.x < allEnemies[i].x + allEnemies[i].width && this.x + this.width > allEnemies[i].x) && (this.y < allEnemies[i].y + allEnemies[i].height && this.y + this.height > allEnemies[i].y) && (this.y > 100)) {
 			console.log("Collision!");
 			gem.x = getRandomNum();
 			this.reset();
@@ -139,7 +137,7 @@ Player.prototype.checkCollisions = function() {
 
 // This function checks if gems are collected. If so the level increases and the gem colored images appear. For each level they become gray again.
 Player.prototype.checkWinning = function() {
-	if ((player.x < gem.x + gem.width && player.x + player.width > gem.x) && (player.y < gem.y + gem.height && player.y + player.height > gem.y)) {
+	if ((this.x < gem.x + gem.width && this.x + this.width > gem.x) && (this.y < gem.y + gem.height && this.y + this.height > gem.y)) {
 		this.score += 1;
 		if ((this.score === 1) || (this.score === 6) || (this.score === 11) || (this.score === 16)) {
 			$('#gem1').replaceWith('<img src="images/Gem Orange.png">');
