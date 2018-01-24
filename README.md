@@ -1,3 +1,4 @@
+![arcadeGameImage](images/arcadeGame.jpg)
 # Classic Arcade Game 
 ===============================
 
