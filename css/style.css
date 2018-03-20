@@ -1,5 +1,14 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+  color: #FA8072;
+}
+
 body {
     text-align: center;
+    background-color: #333;
 }
 
 button {
@@ -13,6 +22,9 @@ button {
   display: inline;
 }
 
+.level-up {
+  color: #fff; 
+}
 .modal {
     display: block;
     position: fixed;
@@ -44,11 +56,11 @@ button {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
